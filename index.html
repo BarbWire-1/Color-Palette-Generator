@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="bg">
+        <h1>Linear Color Palettes<br> In CSS</h1>
+        <h4 style="opacity: 0.3; font-weight: 300;">(manipulating hsl, read rgb, convert to hex)</h4>
+    
+        <img src="https://assets.codepen.io/4970299/hsl.png" alt="" />
+        <div id="main">
+            <ul class="colors">
+                <li class="base-color color1"></li>
+                <li class="base-color color2"></li>
+                <li class="base-color color3"></li>
+                <li class="base-color color4"></li>
+                <li class="base-color color5"></li>
+            </ul>
+    
+            <div class="inputs-container">
+                <div class="input-group">
+                    <label for="baseHue">Base Hue</label>
+                    <input id="baseHue" type="range" min="0" max="360" value="236">
+                    <input id="baseHueValue" type="number" min="0" max="360" placeholder="236" step="1">
+                </div>
+    
+                <div class="input-group">
+                    <label for="saturation">Saturation</label>
+                    <input id="saturation" type="range" min="0" max="100" value="65">
+                    <input id="saturationValue" type="number" min="0" max="100" placeholder="65" step="1">
+                </div>
+    
+                <div class="input-group">
+                    <label for="lightness">Lightness</label>
+                    <input id="lightness" type="range" min="0" max="100" value="60">
+                    <input id="lightnessValue" type="number" min="0" max="100" placeholder="60" step="1">
+                </div>
+    
+                <div class="input-group">
+                    <label for="rotation">Rotation</label>
+                    <input id="rotation" type="range" min="0" max="360" value="40">
+                    <input id="rotationValue" type="number" min="0" max="360" placeholder="40" step="1">
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    <script type="module" src="/index.js"></script>
+  </body>
+</html>

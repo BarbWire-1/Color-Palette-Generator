@@ -1,0 +1,243 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap");
+
+/* VARIABLES */
+:root {
+	/* color calc */
+	--base-hue: 240;
+	--saturation: 85%;
+	--lightness: 60%;
+	--rotation: 40;
+
+	/* layout */
+	--main: hsl(var(--base-hue), var(--saturation), var(--lightness));
+	--shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+/* Calculation of the variants using the custom values from inputs */
+.base-color {
+	--hue: var(--base-hue);
+	background-color: hsl(var(--hue), var(--saturation), var(--lightness));
+	/* layout */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+    min-width: 135px;
+    width: 10vw;
+	min-height: 85px;
+    height: 4.26vw;
+	box-shadow: var(--shadow);
+}
+
+/* each color gets its own hue by adding the rotation-value */
+.color2 {
+	--hue: calc(var(--base-hue) + var(--rotation) * 2);
+}
+
+.color3 {
+	--hue: calc(var(--base-hue) + var(--rotation) * 3);
+}
+
+.color4 {
+	--hue: calc(var(--base-hue) + var(--rotation) * 4);
+}
+
+.color5 {
+	--hue: calc(var(--base-hue) + var(--rotation) * 5);
+}
+
+/* LAYOUT */
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+
+	box-sizing: border-box;
+	text-align: center;
+}
+
+body {
+	box-sizing: border-box;
+	background: #0c0c0c;
+	color: #f9f7f2;
+	font-family: Montserrat;
+}
+
+/* not applied
+#bg {
+  background-image: url("https://assets.codepen.io/4970299/hsl.png");
+}
+*/
+#bg {
+	width: 80vw;
+	margin-top: 0;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+}
+#bg img {
+	position: absolute;
+
+	right: 0;
+	z-index: -1;
+	width: 40vw;
+	aspect-ratio: 1/1;
+	opacity: 0.3;
+	transform: translate3(30vh, 0);
+}
+#main {
+	padding: 5px 5px;
+	display: flex;
+	flex-direction: column;
+	background: #eeeeee1e;
+	width: fit-content;
+	margin: auto;
+	margin-top: 30vh;
+	margin-bottom: 10vh;
+	border-radius: 6px;
+	border: 2px solid #eeeeee2d;
+}
+
+h1 {
+	font-family: Montserrat;
+	font-size: 4vw;
+	font-weight: bolder;
+	width: fit-content;
+	margin: 10vh auto;
+}
+
+li {
+	border-radius: 5px;
+    
+    
+}
+
+/* CONTAINER COLOR BLOCKS */
+.colors {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	gap: 3px;
+
+	width: fit-content;
+	margin: auto;
+	font-size: max(1em, 1vw);
+	line-height: 2;
+	color: white;
+	align-items: center;
+	text-shadow: var(--shadow);
+	margin-bottom: 20px;
+}
+
+/* CONTAINER INPUTS */
+.inputs-container {
+	display: flex;
+	width: fit-content;
+	margin: auto;
+    font-size: max(1em, 1vw)
+}
+
+.input-group {
+	left: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	margin: 20px;
+}
+/* NUMERIC INPUT */
+.input-group input[type="number"] {
+	margin-top: 20px;
+	padding-left: 5px;
+	border: none;
+	box-shadow: var(--shadow);
+}
+.input-group input[type="number"]::-webkit-inner-spin-button {
+	opacity: 1;
+}
+
+/* SLIDERS */
+input[type="range"] {
+	-webkit-appearance: none;
+
+	border-radius: 2px;
+	border: 1px solid lightgray;
+	height: .2vw;
+	margin-top: 20px;
+	box-shadow: var(--shadow);
+}
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: max(25px, 1.2vw);
+  
+	width: 15px;
+	border-radius: 2px;
+	background: var(--main);
+	cursor: ew-resize;
+	box-shadow: var(--shadow);
+}
+
+/* MEDIA QUERIES
+- swap to column, remove bg image add rainbow-text instead
+*/
+@media only screen and (max-width: 1200px) {
+	.colors,
+	.inputs-container {
+		flex-direction: column;
+	}
+	#bg img {
+		display: none;
+	}
+	#main {
+		flex-direction: row;
+		margin-top: 15vh;
+		padding: 10px;
+	}
+	.colors {
+		margin-right: 5px;
+	}
+	.inputs-container {
+		margin-left: 5px;
+	}
+	h4 {
+		margin-bottom: -10vh;
+	}
+	h1 {
+		font-size: 2.5rem;
+		-webkit-text-fill-color: transparent;
+		background-image: linear-gradient(
+			to left,
+			violet,
+			#7367f7,
+			#363cf7,
+			#2afc35,
+			yellow,
+			orange,
+			#fc4520
+		);
+		background-repeat: no-repeat;
+		-webkit-background-clip: text;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+    /* body{
+        overflow: hidden;
+    } */
+	#bg img {
+		display: none;
+	}
+	h1 {
+		font-size: 2rem;
+        margin-top: 0.8em;
+	}
+	#main {
+        margin: 15vh 0 5vh;
+		margin-top: 15vh;
+		width: 100%
+	}
+    .base-color {width: 135px}
+    .input-group {margin-left: 0}
+   
+}
