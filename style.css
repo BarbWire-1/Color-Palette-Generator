@@ -21,11 +21,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 200px;
 	min-width: 135px;
 	width: 10vw;
-	min-height: 85px;
-	height: 4.26vw;
+	min-height: 75px;
+	height: 4vw;
 	box-shadow: var(--shadow);
 }
 
@@ -62,6 +61,7 @@ body {
 	background: #0c0c0c;
 	color: #f9f7f2;
 	font-family: Montserrat;
+	overflow-x: hidden;
 }
 
 /* not applied
@@ -122,7 +122,7 @@ li {
 	width: fit-content;
 	margin: auto;
 	font-size: max(0.9em, 1vw);
-	line-height: 2;
+	line-height: 1.5;
 	color: white;
 	align-items: center;
 	text-shadow: var(--shadow);
@@ -185,16 +185,16 @@ input[type="range"]::-webkit-slider-thumb {
 	.inputs-container {
 		flex-direction: column;
 	}
-	#bg img {
-		display: none;
-	}
+
 	#main {
 		flex-direction: row;
 		margin-top: 15vh;
 		padding: 10px;
+		align-items: center;
 	}
 	.colors {
-		margin-right: 5px;
+		transform: translate(0, -25px);
+		/*align-content: ccenter;*/
 	}
 	.inputs-container {
 		margin-left: 5px;
@@ -207,13 +207,15 @@ input[type="range"]::-webkit-slider-thumb {
 		-webkit-text-fill-color: transparent;
 		background-image: linear-gradient(
 			to left,
+			#d22dcd,
 			violet,
 			#7367f7,
 			#363cf7,
 			#2afc35,
 			yellow,
 			orange,
-			#fc4520
+			#fc4520,
+			#d22dcd
 		);
 		background-repeat: no-repeat;
 		-webkit-background-clip: text;
@@ -223,10 +225,10 @@ input[type="range"]::-webkit-slider-thumb {
 @media only screen and (max-width: 700px) {
 	/* body{
         overflow: hidden;
-    } */
+    } 
 	#bg img {
 		display: none;
-	}
+	}*/
 	h1 {
 		font-size: 2rem;
 		margin-top: 0.8em;
@@ -235,6 +237,11 @@ input[type="range"]::-webkit-slider-thumb {
 		margin: 15vh 0 5vh;
 		margin-top: 15vh;
 		width: 100%;
+		align-items: stretch;
+	}
+	.colors {
+		transform: translate(0, -20px);
+		align-content: center;
 	}
 	.base-color {
 		width: 135px;
