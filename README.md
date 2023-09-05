@@ -21,7 +21,7 @@
 ***
   ## Installation
 
-  As it's a little standalone just play with it. A running version can be found here: https://codepen.io/BarbWire/pen/jOQPPYW
+  As it's a little standalone just play with it. A running version can be found here: https://css-color-palette-generator.netlify.app/
 
   ## Usage
 
