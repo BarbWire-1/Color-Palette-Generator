@@ -80,8 +80,11 @@ const updateColors = () => {
 		// write rgb and hex to array
 		colorData[index] = {
 			rgb: computedColor,
-			hex: colorCode
-		};
+            hex: colorCode,
+            hsl: `hsl(${(baseHue.value + index * rotation.value) % 360}, ${saturation.value}%, ${lightness.value}%)`
+        };
+        
+        console.log(colorData)
 	});
 };
 
@@ -154,10 +157,11 @@ const downloadPalette = () => {
   `;
 
 	// Iterate over the color data and create color blocks with color codes
-	colorData.forEach(({ rgb, hex }) => {
+	colorData.forEach(({ rgb, hex, hsl }) => {
 		fileContent += `
       <div class="color-block" style="background-color:${rgb}">
-		<div class="code">${hex}</div>
+      <div class="code">${hex}<br>${rgb}<br>${hsl}</div>
+		
 		</div>
      
     `;
