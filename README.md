@@ -14,7 +14,9 @@
 
   ## Description
 
-  This is a color Palette Generator . It started as a proof of concept to use CSS variables only for calculating colors. The h, s, l can be changed with a range input. Five colors get created by setting the steps to the next hue in degree (rotation). Finally the created palette can be saved.
+  This is a color Palette Generator . It started as a proof of concept to use CSS variables only for calculating colors. The h, s, l can be changed with a range input. Five colors get created by setting the steps to the next hue in degree (rotation). Rightclick on one of the color-buttons saves the hex code to the clipboard. 
+  
+  Finally the created palette can be saved as an html-file including all the colorblocks and a textfield with corresponding rgb, hex and hsl-code.
 
   ## Table of Contents
 
