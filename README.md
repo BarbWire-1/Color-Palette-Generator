@@ -21,7 +21,9 @@
 ***
   ## Installation
 
-  As it's a little standalone just play with it. A running version can be found here: https://css-color-palette-generator.netlify.app/
+  As it's a little standalone just play with it. Open a running app on netlify by clicking this button:
+  
+  [![Netlify Status](https://api.netlify.com/api/v1/badges/fdefa180-9791-4d4f-8fc1-1bb9b065e75a/deploy-status)](https://css-color-palette-generator.netlify.app/)
 
   ## Usage
 
