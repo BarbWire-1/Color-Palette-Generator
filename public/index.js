@@ -131,8 +131,9 @@ const downloadPalette = () => {
 			
 			}
           .color-block {
-            width: 100px;
-            height: 160px;
+            width: 280px;
+            padding: 20px 0;
+            height: 250px;
             display: flex;
 			justify-content: center;
             margin-right: 10px;
@@ -142,9 +143,10 @@ const downloadPalette = () => {
 			border-radius: 3px;
 			border: 1px solid #0000002d;
 		  	height: fit-content;
-			width: 90%;
+			width: calc(100% - 20px);
 			margin: 5px auto;
-			margin-top: 130%;
+			bottom: 10px;
+            padding: 10px;
 		  	
 
 		  }
