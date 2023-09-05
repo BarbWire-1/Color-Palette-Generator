@@ -1,5 +1,16 @@
+![Static Badge](https://img.shields.io/badge/Javascript-42%25-yellow)
+![Static Badge](https://img.shields.io/badge/CSS-40%25-blue)
+![Static Badge](https://img.shields.io/badge/HTML-18%25-red)
 
-  # Color Palette Generator  ![Project License Badge](https://img.shields.io/badge/license-MIT-brightgreen)
+![Static Badge](https://img.shields.io/badge/LICENSE-MIT-lightgreen)
+
+
+  
+  
+  # Color Palette Generator  
+
+
+
 
   ## Description
 
